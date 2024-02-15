@@ -6,7 +6,7 @@ AutoSplitter scripts for the Quest for Glory series.
   * Needs to be made robust against loading saves
   * Need to test other versions of DOSBox (currently tested only on 0.74-3)
   * Need to test v1.2
-  * Not submitted to speedruns.com yet, as it is not yet consistent
+  * Not submitted to LiveSplit yet, as it is not yet consistent
 * QFG1VGA
   * Not started
 * QFG2EGA
