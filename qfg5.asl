@@ -30,7 +30,7 @@ startup {
          allOptions.Add(ValueTuple.Create(387, "flag", "flag_finish_destiny",  "Rite of Destiny",   false, "common_rite_finish"));
          allOptions.Add(ValueTuple.Create(383, "flag", "flag_finish_courage",  "Rite of Courage",   false, "common_rite_finish"));
          allOptions.Add(ValueTuple.Create(404, "flag", "flag_finish_peace",    "Rite of Peace",     false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(402, "flag", "flag_finish_justice",  "Rite of Justice",   false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(258, "flag", "flag_finish_justice",  "Rite of Justice",   false, "common_rite_finish"));
       }
 
       allOptions.Add(ValueTuple.Create(712, "flag", "deed_king_me", "Accept/Decline Throne", true, "common"));
