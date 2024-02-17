@@ -184,6 +184,7 @@ startup {
       allOptions.Add(ValueTuple.Create(700, "flag", "deed_learn_shrink",             "Learn Shrink",                              false, "deeds"));
       allOptions.Add(ValueTuple.Create(705, "flag", "deed_learn_erana_katrina",      "Learn spell from Erana/Katrina",            false, "deeds"));
       allOptions.Add(ValueTuple.Create(722, "flag", "deed_learn_whirlwind",          "Learn Whirlwind",                           false, "deeds"));
+      allOptions.Add(ValueTuple.Create( 41, "flag", "deed_make_airship",             "Make airship",                              false, "deeds"));
       allOptions.Add(ValueTuple.Create(646, "flag", "deed_make_wings",               "Make Icarus wings",                         false, "deeds"));
       allOptions.Add(ValueTuple.Create(286, "flag", "deed_marry_elsa",               "Marry Elsa",                                false, "deeds"));
       allOptions.Add(ValueTuple.Create(287, "flag", "deed_marry_erana",              "Marry Erana",                               false, "deeds"));
