@@ -11,36 +11,37 @@ startup {
 
    allOptions.Add(ValueTuple.Create(-1, "group", "common", "Common split events", true, (string)null));
    {
-      allOptions.Add(ValueTuple.Create(-1, "group", "common_rite_start", "Start Rite", false, "common"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "common_rite_start", "Start Rite", true, "common"));
       {
-         allOptions.Add(ValueTuple.Create(394, "flag", "flag_start_freedom",   "Rite of Freedom",   false, "common_rite_start"));
-         allOptions.Add(ValueTuple.Create(411, "flag", "flag_start_conquest",  "Rite of Conquest",  false, "common_rite_start"));
-         allOptions.Add(ValueTuple.Create(406, "flag", "flag_start_valor",     "Rite of Valor",     false, "common_rite_start"));
-         allOptions.Add(ValueTuple.Create(386, "flag", "flag_start_destiny",   "Rite of Destiny",   false, "common_rite_start"));
-         allOptions.Add(ValueTuple.Create(382, "flag", "flag_start_courage",   "Rite of Courage",   false, "common_rite_start"));
-         allOptions.Add(ValueTuple.Create(403, "flag", "flag_start_peace",     "Rite of Peace",     false, "common_rite_start"));
-         allOptions.Add(ValueTuple.Create(401, "flag", "flag_start_justice",   "Rite of Justice",   false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(394, "flag", "flag_start_freedom",   "Freedom",   false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(411, "flag", "flag_start_conquest",  "Conquest",  false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(406, "flag", "flag_start_valor",     "Valor",     false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(386, "flag", "flag_start_destiny",   "Destiny",   false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(382, "flag", "flag_start_courage",   "Courage",   false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(403, "flag", "flag_start_peace",     "Peace",     false, "common_rite_start"));
+         allOptions.Add(ValueTuple.Create(401, "flag", "flag_start_justice",   "Justice",   false, "common_rite_start"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "common_rite_finish", "Finish Rite", false, "common"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "common_rite_finish", "Finish Rite", true, "common"));
       {
-         allOptions.Add(ValueTuple.Create(395, "flag", "flag_finish_freedom",  "Rite of Freedom",   false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(412, "flag", "flag_finish_conquest", "Rite of Conquest",  false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(407, "flag", "flag_finish_valor",    "Rite of Valor",     false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(387, "flag", "flag_finish_destiny",  "Rite of Destiny",   false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(383, "flag", "flag_finish_courage",  "Rite of Courage",   false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(404, "flag", "flag_finish_peace",    "Rite of Peace",     false, "common_rite_finish"));
-         allOptions.Add(ValueTuple.Create(258, "flag", "flag_finish_justice",  "Rite of Justice",   false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(395, "flag", "flag_finish_freedom",  "Freedom",   false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(412, "flag", "flag_finish_conquest", "Conquest",  false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(407, "flag", "flag_finish_valor",    "Valor",     false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(387, "flag", "flag_finish_destiny",  "Destiny",   false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(383, "flag", "flag_finish_courage",  "Courage",   false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(404, "flag", "flag_finish_peace",    "Peace",     false, "common_rite_finish"));
+         allOptions.Add(ValueTuple.Create(258, "flag", "flag_finish_justice",  "Justice",   false, "common_rite_finish"));
       }
 
-      allOptions.Add(ValueTuple.Create(712, "flag", "deed_king_me", "Accept/Decline Throne", true, "common"));
+      allOptions.Add(ValueTuple.Create(712, "flag", "deed_king_me", "Accept/decline throne", true, "common"));
+      allOptions.Add(ValueTuple.Create(726, "flag", "deed_win_chief_thief", "Win Chief Thief contest", true, "common"));
    }
 
-   allOptions.Add(ValueTuple.Create(-1, "group", "rooms", "Split on room entered", false, (string)null));
+   allOptions.Add(ValueTuple.Create(-1, "group", "rooms", "Split on room entered", true, (string)null));
    {
-      allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria", "Silmaria", false, "rooms"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria", "Silmaria", true, "rooms"));
       {
-         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_north", "North", false, "rooms_silmaria"));
+         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_north", "North", true, "rooms_silmaria"));
          {
             allOptions.Add(ValueTuple.Create(220, "room", "room_nob_hill",           "Nob Hill",                   false, "rooms_silmaria_north"));
             allOptions.Add(ValueTuple.Create(415, "room", "room_erasmus_guardian",   "Erasmus' guardian",          false, "rooms_silmaria_north"));
@@ -49,10 +50,11 @@ startup {
             allOptions.Add(ValueTuple.Create(350, "room", "room_arena_antechamber",  "Arena (antechamber)",        false, "rooms_silmaria_north"));
             allOptions.Add(ValueTuple.Create(355, "room", "room_arena_stadium",      "Arena (stadium)",            false, "rooms_silmaria_north"));
             allOptions.Add(ValueTuple.Create(360, "room", "room_breakin_house",      "Break-in house",             false, "rooms_silmaria_north"));
+            allOptions.Add(ValueTuple.Create(370, "room", "room_ferraris_house",     "Ferrari's house",            false, "rooms_silmaria_north"));
             allOptions.Add(ValueTuple.Create(240, "room", "room_hall_of_kings",      "Hall of Kings",              false, "rooms_silmaria_north"));
          }
 
-         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_central", "Central", false, "rooms_silmaria"));
+         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_central", "Central", true, "rooms_silmaria"));
          {
             allOptions.Add(ValueTuple.Create(200, "room", "room_town_square",  "Town Square", false, "rooms_silmaria_central"));
             allOptions.Add(ValueTuple.Create(340, "room", "room_bank",         "Bank",        false, "rooms_silmaria_central"));
@@ -60,7 +62,7 @@ startup {
             allOptions.Add(ValueTuple.Create(310, "room", "room_apothecary",   "Apothecary",  false, "rooms_silmaria_central"));
          }
 
-         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_south", "South", false, "rooms_silmaria"));
+         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_south", "South", true, "rooms_silmaria"));
          {
             allOptions.Add(ValueTuple.Create(210, "room", "room_docks",           "Docks",                false, "rooms_silmaria_south"));
             allOptions.Add(ValueTuple.Create(250, "room", "room_dead_parrot",     "Dead Parrot Inn",      false, "rooms_silmaria_south"));
@@ -69,7 +71,7 @@ startup {
             allOptions.Add(ValueTuple.Create(400, "room", "room_science_academy", "Academy of Science",   false, "rooms_silmaria_south"));
          }
 
-         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_west", "West", false, "rooms_silmaria"));
+         allOptions.Add(ValueTuple.Create(-1, "group", "rooms_silmaria_west", "West", true, "rooms_silmaria"));
          {
             allOptions.Add(ValueTuple.Create(230, "room", "room_west_gate",          "West Gate",            false, "rooms_silmaria_west"));
             allOptions.Add(ValueTuple.Create(380, "room", "room_adventurers_guild",  "Adventurer's Guild",   false, "rooms_silmaria_west"));
@@ -80,10 +82,9 @@ startup {
          }
 
          //allOptions.Add(ValueTuple.Create(260, "room", "room_unknown_260", "???? (260)", false, "rooms_silmaria_????"));
-         //allOptions.Add(ValueTuple.Create(370, "room", "room_unknown_370", "???? (370)", false, "rooms_silmaria_????"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "rooms_marete", "Marete", false, "rooms"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "rooms_marete", "Marete", true, "rooms"));
       {
          allOptions.Add(ValueTuple.Create(730, "room", "room_pool",                  "Dragon Blood Pool",                false, "rooms_marete"));
          allOptions.Add(ValueTuple.Create(735, "room", "room_dragon_1",              "Dragon battle (phase 1)",          false, "rooms_marete"));
@@ -101,7 +102,7 @@ startup {
          allOptions.Add(ValueTuple.Create(580, "room", "room_tinos",                 "Tinos",                            false, "rooms_marete"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "rooms_other", "Other islands", false, "rooms"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "rooms_other", "Other islands", true, "rooms"));
       {
          allOptions.Add(ValueTuple.Create(440, "room", "room_atlantis_exterior",  "Atlantis (exterior)",  false, "rooms_other"));
          allOptions.Add(ValueTuple.Create(450, "room", "room_atlantis_interior",  "Atlantis (interior)",  false, "rooms_other"));
@@ -120,100 +121,155 @@ startup {
       }
    }
 
-   allOptions.Add(ValueTuple.Create(-1, "group", "deeds", "Split on deed completed", false, (string)null));
+   allOptions.Add(ValueTuple.Create(-1, "group", "deeds", "Split on deed completed", true, (string)null));
    {
-      allOptions.Add(ValueTuple.Create( 27, "flag", "deed_apprehend_arestes",        "Apprehend Arestes",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(602, "flag", "deed_buy_brazier",              "Buy Brazier",                               false, "deeds"));
-      allOptions.Add(ValueTuple.Create(637, "flag", "deed_buy_healing_pills",        "Buy Healing Pills",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(653, "flag", "deed_buy_mana_potion",          "Buy Mana Potion",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(654, "flag", "deed_buy_map",                  "Buy Map",                                   false, "deeds"));
-      allOptions.Add(ValueTuple.Create(652, "flag", "deed_buy_magnets",              "Buy Mystic Magnets",                        false, "deeds"));
-      allOptions.Add(ValueTuple.Create(593, "flag", "deed_buy_painting",             "Buy Painting",                              false, "deeds"));
-      allOptions.Add(ValueTuple.Create(668, "flag", "deed_buy_poison_pills",         "Buy Poison Cure Pills",                     false, "deeds"));
-      allOptions.Add(ValueTuple.Create(707, "flag", "deed_buy_stamina_pills",        "Buy Stamina Pills",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(674, "flag", "deed_resistance_pool",          "Cast Resistance at Dragon Blood Pool",      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(706, "flag", "deed_create_staff",             "Create Magic Staff",                        false, "deeds"));
-      allOptions.Add(ValueTuple.Create(631, "flag", "deed_dance_inn",                "Dance at the Inn",                          false, "deeds"));
-      allOptions.Add(ValueTuple.Create(606, "flag", "deed_dance_dryads",             "Dance with the Dryads",                     false, "deeds"));
-      allOptions.Add(ValueTuple.Create( 94, "flag", "deed_defeat_assassin",          "Defeat Assassin",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(611, "flag", "deed_defeat_dragon",            "Defeat Dragon",                             false, "deeds"));
-      allOptions.Add(ValueTuple.Create(655, "flag", "deed_enter_mansion",            "Enter Minos' mansion",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(390, "flag", "deed_enter_rites",              "Enter Rites of Rulership",                  false, "deeds"));
-      allOptions.Add(ValueTuple.Create(617, "flag", "deed_enter_academy",            "Enter Science Academy",                     false, "deeds"));
-      allOptions.Add(ValueTuple.Create(235, "flag", "deed_free_ios",                 "Free Ios",                                  false, "deeds"));
-      allOptions.Add(ValueTuple.Create(246, "flag", "deed_free_keros",               "Free Keros",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(312, "flag", "deed_free_naxos",               "Free Naxos",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(660, "flag", "deed_no_naxos_alarm",           "Free Naxos without alarm",                  false, "deeds"));
-      allOptions.Add(ValueTuple.Create(333, "flag", "deed_free_paros",               "Free Paros",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(516, "flag", "deed_free_tinos",               "Free Tinos",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(592, "flag", "deed_get_augment",              "Get Augment scroll",                        false, "deeds"));
-      allOptions.Add(ValueTuple.Create(645, "flag", "deed_get_lotus",                "Get Black Lotus",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(616, "flag", "deed_get_drugged_chocolate",    "Get Drugged Chocolate from Fenrus",         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(698, "flag", "deed_get_generals_shield",      "Get General's Shield",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(632, "flag", "deed_get_goo",                  "Get Goo",                                   false, "deeds"));
-      allOptions.Add(ValueTuple.Create(638, "flag", "deed_get_hippocrene",           "Get Hippocrene Water",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(639, "flag", "deed_get_scales",               "Get Hydra Scales",                          false, "deeds"));
-      allOptions.Add(ValueTuple.Create(640, "flag", "deed_get_teeth",                "Get Hydra Teeth",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(625, "flag", "deed_get_toolkit",              "Get Interesting Toolkit",                   false, "deeds"));
-      allOptions.Add(ValueTuple.Create(643, "flag", "deed_get_lethe",                "Get Lethe Water",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(651, "flag", "deed_get_wood",                 "Get Magic Wood",                            false, "deeds"));
-      allOptions.Add(ValueTuple.Create(671, "flag", "deed_get_statue",               "Get Peace Statue",                          false, "deeds"));
-      allOptions.Add(ValueTuple.Create(620, "flag", "deed_get_feathers",             "Get Pegasus Feathers",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(609, "flag", "deed_get_proof",                "Get Proof of Destiny",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(696, "flag", "deed_get_sewn_sheets",          "Get Sewn Sheets",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(618, "flag", "deed_get_sheets",               "Get Sheets",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(703, "flag", "deed_get_sigil",                "Get Sigil",                                 false, "deeds"));
-      allOptions.Add(ValueTuple.Create(709, "flag", "deed_get_styx",                 "Get Styx Water",                            false, "deeds"));
-      allOptions.Add(ValueTuple.Create(711, "flag", "deed_get_blast",                "Get Thermonuclear Blast scroll",            false, "deeds"));
-      allOptions.Add(ValueTuple.Create(603, "flag", "deed_get_waterbreathing",       "Get Waterbreathing Amulet",                 false, "deeds"));
-      allOptions.Add(ValueTuple.Create(720, "flag", "deed_get_wax",                  "Get Wax",                                   false, "deeds"));
-      allOptions.Add(ValueTuple.Create(185, "flag", "deed_give_aa_pizza",            "Give A&A Pizza to Pretorius",               false, "deeds"));
-      allOptions.Add(ValueTuple.Create(177, "flag", "deed_give_basket",              "Give Basket to Sarra",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(183, "flag", "deed_give_lotus",               "Give Black Lotus to Salim/Julanar",         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(178, "flag", "deed_give_drugged_chocolate",   "Give Chocolate to Salim/Julanar",           false, "deeds"));
-      allOptions.Add(ValueTuple.Create(628, "flag", "deed_give_deed",                "Give Deed to Ann",                          false, "deeds"));
-      allOptions.Add(ValueTuple.Create(181, "flag", "deed_give_hippocrene",          "Give Hippocrene Water to FA",               false, "deeds"));
-      allOptions.Add(ValueTuple.Create(182, "flag", "deed_give_lethe",               "Give Lethe Water to Salim/Julanar",         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(184, "flag", "deed_give_pj_pizza",            "Give P&J Pizza to Mobius",                  false, "deeds"));
-      allOptions.Add(ValueTuple.Create(176, "flag", "deed_give_seeds",               "Give Seeds to Ann",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(192, "flag", "deed_gort_lives",               "Gort survives final battle",                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(692, "flag", "deed_heal_gort",                "Heal Gort during final battle",             false, "deeds"));
-      allOptions.Add(ValueTuple.Create(601, "flag", "deed_learn_boom",               "Learn Boom",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(619, "flag", "deed_learn_fascination",        "Learn Fascination",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(675, "flag", "deed_learn_rip",                "Learn Rip",                                 false, "deeds"));
-      allOptions.Add(ValueTuple.Create(700, "flag", "deed_learn_shrink",             "Learn Shrink",                              false, "deeds"));
-      allOptions.Add(ValueTuple.Create(705, "flag", "deed_learn_erana_katrina",      "Learn spell from Erana/Katrina",            false, "deeds"));
-      allOptions.Add(ValueTuple.Create(722, "flag", "deed_learn_whirlwind",          "Learn Whirlwind",                           false, "deeds"));
-      allOptions.Add(ValueTuple.Create( 41, "flag", "deed_make_airship",             "Make airship",                              false, "deeds"));
-      allOptions.Add(ValueTuple.Create(646, "flag", "deed_make_wings",               "Make Icarus wings",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(286, "flag", "deed_marry_elsa",               "Marry Elsa",                                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(287, "flag", "deed_marry_erana",              "Marry Erana",                               false, "deeds"));
-      allOptions.Add(ValueTuple.Create(237, "flag", "deed_marry_katrina",            "Marry Katrina",                             false, "deeds"));
-      allOptions.Add(ValueTuple.Create(288, "flag", "deed_marry_nawar",              "Marry Nawar",                               false, "deeds"));
-      allOptions.Add(ValueTuple.Create(349, "flag", "deed_science_aptitude",         "Pass Science aptitude test",                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(572, "flag", "deed_feather_wings",            "Put Feather on wings",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(563, "flag", "deed_wax_wings",                "Put Wax on wings",                          false, "deeds"));
-      allOptions.Add(ValueTuple.Create(608, "flag", "deed_reach_delos",              "Reach Delos Island",                        false, "deeds"));
-      allOptions.Add(ValueTuple.Create(591, "flag", "deed_reach_hydra",              "Reach Hydra Island",                        false, "deeds"));
-      allOptions.Add(ValueTuple.Create(694, "flag", "deed_reach_science",            "Reach Science Island",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(701, "flag", "deed_reach_sifnos",             "Reach Sifnos",                              false, "deeds"));
-      allOptions.Add(ValueTuple.Create(710, "flag", "deed_read_manual",              "Read Swimming Manual",                      false, "deeds"));
-      allOptions.Add(ValueTuple.Create(614, "flag", "deed_restore_pillar",           "Restore pillar during final battle",        false, "deeds"));
-      allOptions.Add(ValueTuple.Create(199, "flag", "deed_winged_gondola",           "Retrieve winged gondola",                   false, "deeds"));
-      allOptions.Add(ValueTuple.Create(644, "flag", "deed_sign_logbook",             "Sign logbook",                              false, "deeds"));
-      allOptions.Add(ValueTuple.Create(519, "flag", "deed_toro_lives",               "Toro survives final battle",                false, "deeds"));
-      allOptions.Add(ValueTuple.Create(626, "flag", "deed_fireproof_pool",           "Use Fireproof Potion at Dragon Blood Pool", false, "deeds"));
-      allOptions.Add(ValueTuple.Create(672, "flag", "deed_fireproof_final",          "Use Fireproof Potion during final battle",  false, "deeds"));
-      allOptions.Add(ValueTuple.Create(719, "flag", "deed_use_magnet",               "Use Mystic Magnet",                         false, "deeds"));
-      allOptions.Add(ValueTuple.Create(554, "flag", "deed_visit_erana",              "Visit Erana",                               false, "deeds"));
-      allOptions.Add(ValueTuple.Create( 23, "flag", "deed_visit_erasmus",            "Visit Erasmus",                             false, "deeds"));
-      allOptions.Add(ValueTuple.Create(557, "flag", "deed_visit_katrina",            "Visit Katrina",                             false, "deeds"));
-      allOptions.Add(ValueTuple.Create(642, "flag", "deed_warn_guards",              "Warn guards about Kokeeno's death",         false, "deeds"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "deeds_all", "All classes", true, "deeds"));
+      {
+         allOptions.Add(ValueTuple.Create(602, "flag", "deed_buy_brazier",              "Buy Brazier",                               false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(637, "flag", "deed_buy_healing_pills",        "Buy Healing Pills",                         false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(654, "flag", "deed_buy_map",                  "Buy Map",                                   false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(652, "flag", "deed_buy_magnets",              "Buy Mystic Magnets",                        false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(593, "flag", "deed_buy_painting",             "Buy Painting",                              false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(668, "flag", "deed_buy_poison_pills",         "Buy Poison Cure Pills",                     false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(707, "flag", "deed_buy_stamina_pills",        "Buy Stamina Pills",                         false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(631, "flag", "deed_dance_inn",                "Dance at the Inn",                          false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(606, "flag", "deed_dance_dryads",             "Dance with the Dryads",                     false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create( 94, "flag", "deed_defeat_assassin",          "Defeat Assassin",                           false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(611, "flag", "deed_defeat_dragon",            "Defeat Dragon",                             false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(695, "flag", "deed_discover_secret_lab",      "Discover secret science lab",               false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(655, "flag", "deed_enter_mansion",            "Enter Minos' mansion",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(390, "flag", "deed_enter_rites",              "Enter Rites of Rulership",                  false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(617, "flag", "deed_enter_academy",            "Enter Science Academy",                     false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(235, "flag", "deed_free_ios",                 "Free Ios",                                  false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(246, "flag", "deed_free_keros",               "Free Keros",                                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(312, "flag", "deed_free_naxos",               "Free Naxos",                                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(333, "flag", "deed_free_paros",               "Free Paros",                                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(516, "flag", "deed_free_tinos",               "Free Tinos",                                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(645, "flag", "deed_get_lotus",                "Get Black Lotus",                           false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(698, "flag", "deed_get_generals_shield",      "Get General's Shield",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(632, "flag", "deed_get_goo",                  "Get Goo",                                   false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(638, "flag", "deed_get_hippocrene",           "Get Hippocrene Water",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(639, "flag", "deed_get_scales",               "Get Hydra Scales",                          false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(640, "flag", "deed_get_teeth",                "Get Hydra Teeth",                           false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(643, "flag", "deed_get_lethe",                "Get Lethe Water",                           false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(671, "flag", "deed_get_statue",               "Get Peace Statue",                          false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(620, "flag", "deed_get_feathers",             "Get Pegasus Feathers",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(609, "flag", "deed_get_proof",                "Get Proof of Destiny",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(696, "flag", "deed_get_sewn_sheets",          "Get Sewn Sheets",                           false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(618, "flag", "deed_get_sheets",               "Get Sheets",                                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(703, "flag", "deed_get_sigil",                "Get Sigil",                                 false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(709, "flag", "deed_get_styx",                 "Get Styx Water",                            false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(603, "flag", "deed_get_waterbreathing",       "Get Waterbreathing Amulet",                 false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(720, "flag", "deed_get_wax",                  "Get Wax",                                   false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(185, "flag", "deed_give_aa_pizza",            "Give A&A Pizza to Pretorius",               false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(177, "flag", "deed_give_basket",              "Give Basket to Sarra",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(628, "flag", "deed_give_deed",                "Give Deed to Ann",                          false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(178, "flag", "deed_give_drugged_chocolate",   "Give Drugged Chocolate to Salim/Julanar",   false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(181, "flag", "deed_give_hippocrene",          "Give Hippocrene Water to FA",               false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(184, "flag", "deed_give_pj_pizza",            "Give P&J Pizza to Mobius",                  false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(176, "flag", "deed_give_seeds",               "Give Seeds to Ann",                         false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(192, "flag", "deed_gort_lives",               "Have Gort survive final battle",            false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(519, "flag", "deed_toro_lives",               "Have Toro survive final battle",            false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(692, "flag", "deed_heal_gort",                "Heal Gort during final battle",             false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create( 41, "flag", "deed_make_airship",             "Make airship",                              false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(646, "flag", "deed_make_wings",               "Make Icarus wings",                         false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(286, "flag", "deed_marry_elsa",               "Marry Elsa",                                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(287, "flag", "deed_marry_erana",              "Marry Erana",                               false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(237, "flag", "deed_marry_katrina",            "Marry Katrina",                             false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(288, "flag", "deed_marry_nawar",              "Marry Nawar",                               false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(215, "flag", "deed_open_hades",               "Open gate to Hades",                        false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(349, "flag", "deed_science_aptitude",         "Pass Science Aptitude Test",                false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(572, "flag", "deed_feather_wings",            "Put Feather on wings",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(563, "flag", "deed_wax_wings",                "Put Wax on wings",                          false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(608, "flag", "deed_reach_delos",              "Reach Delos Island",                        false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(591, "flag", "deed_reach_hydra",              "Reach Hydra Island",                        false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(694, "flag", "deed_reach_science",            "Reach Science Island",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(701, "flag", "deed_reach_sifnos",             "Reach Sifnos",                              false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(710, "flag", "deed_read_manual",              "Read Swimming Manual",                      false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(614, "flag", "deed_restore_pillar",           "Restore pillar during final battle",        false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(199, "flag", "deed_winged_gondola",           "Retrieve winged gondola",                   false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(690, "flag", "deed_sacrifice_self",           "Sacrifice self to defeat Dragon",           false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(644, "flag", "deed_sign_logbook",             "Sign logbook",                              false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(583, "flag", "deed_wolfie_balloon",           "Tell Wolfie about Balloon",                 false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(626, "flag", "deed_fireproof_pool",           "Use Fireproof Potion at Dragon Blood Pool", false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(672, "flag", "deed_fireproof_final",          "Use Fireproof Potion during final battle",  false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(719, "flag", "deed_use_magnet",               "Use Mystic Magnet",                         false, "deeds_all"));
+         allOptions.Add(ValueTuple.Create(642, "flag", "deed_warn_guards",              "Warn guards about Kokeeno's death",         false, "deeds_all"));
+      }
+
+      allOptions.Add(ValueTuple.Create(-1, "group", "deeds_wizard_paladin", "Wizard/Paladin", true, "deeds"));
+      {
+         allOptions.Add(ValueTuple.Create( 27, "flag", "deed_apprehend_arestes",        "Apprehend Arestes",                         false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create(625, "flag", "deed_get_toolkit",              "Get Interesting Toolkit",                   false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create(183, "flag", "deed_give_lotus",               "Give Black Lotus to Salim/Julanar",         false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create(182, "flag", "deed_give_lethe",               "Give Lethe Water to Salim/Julanar",         false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create(351, "flag", "deed_peace_peacefully",         "Negotiate peace peacefully",                false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create(146, "flag", "deed_release_erana",            "Release Erana",                             false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create(238, "flag", "deed_release_katrina",          "Release Katrina",                           false, "deeds_wizard_paladin"));
+         allOptions.Add(ValueTuple.Create( 24, "flag", "deed_show_toolkit",             "Show Interesting Toolkit to Erasmus",       false, "deeds_wizard_paladin"));
+      }
+
+      allOptions.Add(ValueTuple.Create(-1, "group", "deeds_wizard", "Wizard only", true, "deeds"));
+      {
+         allOptions.Add(ValueTuple.Create(653, "flag", "deed_buy_mana_potion",          "Buy Mana Potion",                           false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(674, "flag", "deed_resistance_pool",          "Cast Resistance at Dragon Blood Pool",      false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(706, "flag", "deed_create_staff",             "Create Magic Staff",                        false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(660, "flag", "deed_no_naxos_alarm",           "Free Naxos without alarm",                  false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(592, "flag", "deed_get_augment",              "Get Augment scroll",                        false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(616, "flag", "deed_get_drugged_chocolate",    "Get Drugged Chocolate from Fenrus",         false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(651, "flag", "deed_get_wood",                 "Get Magic Wood",                            false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(711, "flag", "deed_get_blast",                "Get Thermonuclear Blast scroll",            false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(601, "flag", "deed_learn_boom",               "Learn Boom",                                false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(619, "flag", "deed_learn_fascination",        "Learn Fascination",                         false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(675, "flag", "deed_learn_rip",                "Learn Rip",                                 false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(700, "flag", "deed_learn_shrink",             "Learn Shrink",                              false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(705, "flag", "deed_learn_erana_katrina",      "Learn spell from Erana/Katrina",            false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(722, "flag", "deed_learn_whirlwind",          "Learn Whirlwind",                           false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(554, "flag", "deed_visit_erana",              "Visit Erana again",                         false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create( 23, "flag", "deed_visit_erasmus",            "Visit Erasmus again",                       false, "deeds_wizard"));
+         allOptions.Add(ValueTuple.Create(557, "flag", "deed_visit_katrina",            "Visit Katrina again",                       false, "deeds_wizard"));
+      }
+
+      allOptions.Add(ValueTuple.Create(-1, "group", "deeds_thief", "Thief only", true, "deeds"));
+      {
+         allOptions.Add(ValueTuple.Create( 91, "flag", "deed_breakin_house",            "Break into break-in house",                 false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(634, "flag", "deed_blackjack",                "Buy Blackjack",                             false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(598, "flag", "deed_imitation_blackbird",      "Buy Imitation Blackbird",                   false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(648, "flag", "deed_magic_dagger",             "Buy Magic Dagger",                          false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(666, "flag", "deed_pickpocket_knife",         "Buy Pickpocket Knife",                      false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(689, "flag", "deed_rope",                     "Buy Rope",                                  false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(113, "flag", "deed_disarm_guild_trap",        "Disarm Thieves' Guild trap",                false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(143, "flag", "deed_enter_chief_thief",        "Enter Chief Thief contest",                 false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(505, "flag", "deed_enter_thieves_guild",      "Enter/exit Thieves' Guild",                 false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create( 92, "flag", "deed_ferraris_house",           "Escape from Ferrari's house",               false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(597, "flag", "deed_blackbird",                "Get Blackbird",                             false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(669, "flag", "deed_poisoned_dagger",          "Get Poisoned Dagger",                       false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(169, "flag", "deed_blackbird_ferrari",        "Give Blackbird to Ferrari",                 false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(579, "flag", "deed_blackbird_wolfie",         "Give Blackbird to Wolfie",                  false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(636, "flag", "deed_rope_grapnel",             "Make Rope and Grapnel",                     false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(721, "flag", "deed_wheel_of_fortune",         "Play Wheel of Fortune",                     false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create( 58, "flag", "deed_rob_bank_1",               "Rob Bank",                                  false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create( 59, "flag", "deed_rob_bank_2",               "Rob Bank again",                            false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(715, "flag", "deed_thief_sign_arestes",       "Show Thief Sign to Arestes",                false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(716, "flag", "deed_thief_sign_bruno",         "Show Thief Sign to Bruno",                  false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(717, "flag", "deed_thief_sign_ferrari",       "Show Thief Sign to Ferrari",                false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(718, "flag", "deed_thief_sign_ugarte",        "Show Thief Sign to Ugarte",                 false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(702, "flag", "deed_sifnos_quiet",             "Sneak into Sifnos fortress",                false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(657, "flag", "deed_minos_upper_quiet",        "Sneak into Minos' mansion top floor",       false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(656, "flag", "deed_minos_chamber_quiet",      "Sneak into Minos' treasure room",           false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(610, "flag", "deed_blackjack_enemy",          "Successfully Blackjack an enemy",           false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(665, "flag", "deed_pickpocket_dummy",         "Successfully Pickpocket dummy",             false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(667, "flag", "deed_pickpocket_townsfolk",     "Successfully Pickpocket someone",           false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(107, "flag", "deed_swap_blackbirds",          "Swap Blackbirds",                           false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(559, "flag", "deed_talk_ferrari_blackbird",   "Talk to Ferrari about Blackbird",           false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(670, "flag", "deed_poisoned_dagger_dragon",   "Use Poisoned Dagger on Dragon",             false, "deeds_thief"));
+         allOptions.Add(ValueTuple.Create(586, "flag", "deed_win_wheel_fortune",        "Win Wheel of Fortune three times",          false, "deeds_thief"));
+      }
    }
 
-   allOptions.Add(ValueTuple.Create(-1, "group", "items", "Split on item acquired", false, (string)null));
+   allOptions.Add(ValueTuple.Create(-1, "group", "items", "Split on item acquired", true, (string)null));
    {
-      allOptions.Add(ValueTuple.Create(-1, "group", "items_weapons", "Weapons", false, "items"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "items_weapons", "Weapons", true, "items"));
       {
          allOptions.Add(ValueTuple.Create(0x18B73, "item", "item_barbed_spear",         "Barbed Spear",         false, "items_weapons"));
          allOptions.Add(ValueTuple.Create(0x18B27, "item", "item_blackjack",            "Blackjack",            false, "items_weapons"));
@@ -241,7 +297,7 @@ startup {
          allOptions.Add(ValueTuple.Create(0x18B00, "item", "item_wurmbane_spear",       "Wurmbane Spear",       false, "items_weapons"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "items_armor", "Armor", false, "items"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "items_armor", "Armor", true, "items"));
       {
          allOptions.Add(ValueTuple.Create(0x18AF0, "item", "item_chain_mail",           "Chain Mail",           false, "items_armor"));
          allOptions.Add(ValueTuple.Create(0x18AEF, "item", "item_generals_shield",      "General's Shield",     false, "items_armor"));
@@ -255,7 +311,7 @@ startup {
          allOptions.Add(ValueTuple.Create(0x18AED, "item", "item_shield",               "Shield",               false, "items_armor"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "items_accessories", "Accessories", false, "items"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "items_accessories", "Accessories", true, "items"));
       {
          allOptions.Add(ValueTuple.Create(0x18B3B, "item", "item_amulet_of_attack",        "Amulet of Attack",        false, "items_accessories"));
          allOptions.Add(ValueTuple.Create(0x18B3A, "item", "item_amulet_of_defense",       "Amulet of Defense",       false, "items_accessories"));
@@ -271,7 +327,7 @@ startup {
          allOptions.Add(ValueTuple.Create(0x18B41, "item", "item_waterbreathing_amulet",   "Waterbreathing Amulet",   false, "items_accessories"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "items_scrolls", "Scrolls", false, "items"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "items_scrolls", "Scrolls", true, "items"));
       {
          allOptions.Add(ValueTuple.Create(0x18B68, "item", "item_augment_scroll",             "Augment Scroll",             false, "items_scrolls"));
          allOptions.Add(ValueTuple.Create(0x18B6C, "item", "item_boom_scroll",                "Boom Scroll",                false, "items_scrolls"));
@@ -286,7 +342,7 @@ startup {
          allOptions.Add(ValueTuple.Create(0x18B70, "item", "item_zap_scroll",                 "Zap Scroll",                 false, "items_scrolls"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "items_potions", "Potions/Pills", false, "items"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "items_potions", "Potions/Pills", true, "items"));
       {
          allOptions.Add(ValueTuple.Create(0x18B10, "item", "item_fire_proofing_potion", "Fire Proofing Potion", false, "items_potions"));
          allOptions.Add(ValueTuple.Create(0x18B09, "item", "item_healing_pills",        "Healing Pills",        false, "items_potions"));
@@ -298,7 +354,7 @@ startup {
          allOptions.Add(ValueTuple.Create(0x18B0E, "item", "item_vitality_potion",      "Vitality Potion",      false, "items_potions"));
       }
 
-      allOptions.Add(ValueTuple.Create(-1, "group", "items_misc", "Miscellaneous", false, "items"));
+      allOptions.Add(ValueTuple.Create(-1, "group", "items_misc", "Miscellaneous", true, "items"));
       {
          allOptions.Add(ValueTuple.Create(0x18B1F, "item", "item_aa_pizza",             "A&A Pizza",               false, "items_misc"));
          allOptions.Add(ValueTuple.Create(0x18B28, "item", "item_acme_toolkit",         "ACME Toolkit",            false, "items_misc"));
@@ -374,7 +430,7 @@ startup {
       }
    }
 
-   allOptions.Add(ValueTuple.Create(-1, "group", "spells", "Split on spell learned", false, (string)null));
+   allOptions.Add(ValueTuple.Create(-1, "group", "spells", "Split on spell learned", true, (string)null));
    {
       allOptions.Add(ValueTuple.Create(0x18C91, "item", "spell_augment",             "Augment",              false, "spells"));
       allOptions.Add(ValueTuple.Create(0x18C8C, "item", "spell_aura",                "Aura",                 false, "spells"));
@@ -407,7 +463,7 @@ startup {
       allOptions.Add(ValueTuple.Create(0x18C8F, "item", "spell_zap",                 "Zap",                  false, "spells"));
    }
 
-   allOptions.Add(ValueTuple.Create(-1, "group", "abilities", "Split on Paladin ability learned", false, (string)null));
+   allOptions.Add(ValueTuple.Create(-1, "group", "abilities", "Split on Paladin ability learned", true, (string)null));
    {
       allOptions.Add(ValueTuple.Create(0x18CE7, "item", "ability_awe",            "Awe",            false, "abilities"));
       allOptions.Add(ValueTuple.Create(0x18CE3, "item", "ability_destroy_undead", "Destroy Undead", false, "abilities"));
@@ -482,6 +538,7 @@ onStart {
 }
 
 split {
+   // @TODO: In theory, this can misfire on reboot due to uninitialized memory
    if (current.loadedRoom != old.loadedRoom && vars.pendingRoomCodes.Remove(current.loadedRoom)) {
       ++vars.queuedSplits;
    }
