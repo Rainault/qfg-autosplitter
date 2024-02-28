@@ -20,5 +20,5 @@ AutoSplitter scripts for the Quest for Glory series.
 * QFG5
   * Supports auto-start when making a new character (less consistent if you don't restart between runs)
   * Supports auto-splitting on rooms, items, spells, deeds, and some flag-based events
-  * Missing class-specific deeds for Fighter, Thief, and Paladin
+  * Missing class-specific deeds for Fighter and Paladin
   * Missing a couple rooms
