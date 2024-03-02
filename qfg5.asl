@@ -1,9 +1,19 @@
-state("QfG5") {
+state("QfG5", "GOG") {
+   int invHeadPtr : 0x167394, 0xC7C;
    int charPtr : 0x168088, 0x80;
    byte100 flags : 0x168088, 0x90;
    int day : 0x168088, 0x104;
    int loadedRoom : 0x1680B0, 0x20; // Excludes world map (900)
    //int dstRoom : 0x1665B8, 0xD0; // Seems to be a logical ID that doesn't always match loadedRoom, and doesn't always get set
+}
+
+state("QfG5", "1.0") {
+   int invHeadPtr : 0x167364, 0xC7C;
+   int charPtr : 0x168058, 0x80;
+   byte100 flags : 0x168058, 0x90;
+   int day : 0x168058, 0x104;
+   int loadedRoom : 0x168080, 0x20; // Excludes world map (900)
+   //int dstRoom : 0x166588, 0xD0; // Seems to be a logical ID that doesn't always match loadedRoom, and doesn't always get set
 }
 
 startup {
@@ -503,6 +513,20 @@ startup {
    vars.queuedSplits = 0;
 }
 
+init {
+   switch (memory.ReadValue<uint>(modules.First().BaseAddress + 0x88)) {
+   case 0x36BF6C01:
+      version = "GOG";
+      break;
+   case 0x3665C9C9:
+      version = "1.0";
+      break;
+   default:
+      //MessageBox.Show("Unrecognized version of QFG5 detected. The only supported versions are the official Steam/GOG releases and the original 1.0 release.");
+      break;
+   }
+}
+
 onReset {
    vars.pendingRoomCodes.Clear();
    vars.pendingItemCodes.Clear();
@@ -511,6 +535,8 @@ onReset {
 }
 
 start {
+   if (version == "") { return false; }
+
    // Reallocated on game start, though less reliable if game isn't rebooted between attempts
    if (current.charPtr != old.charPtr) {
       return true;
@@ -538,6 +564,8 @@ onStart {
 }
 
 split {
+   if (version == "") { return false; }
+
    // @TODO: In theory, this can misfire on reboot due to uninitialized memory
    if (current.loadedRoom != old.loadedRoom && vars.pendingRoomCodes.Remove(current.loadedRoom)) {
       ++vars.queuedSplits;
@@ -547,7 +575,7 @@ split {
       // Inventory is a linked list that we must walk
       // @TODO: Find a way to detect inventory change so we don't do this every frame
 
-      int invAddr = new DeepPointer(0x167394, 0xC7C).Deref<int>(game);
+      int invAddr = current.invHeadPtr;
       int invCount = 0; // Safety valve so we don't loop infinitely
       while (invAddr != 0 && invCount < 500) {
          int container = memory.ReadValue<int>(IntPtr.Zero + invAddr + 0x1C);
