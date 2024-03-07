@@ -3,7 +3,8 @@ state("QfG5", "GOG") {
    int charPtr : 0x168088, 0x80;
    byte100 flags : 0x168088, 0x90;
    int day : 0x168088, 0x104;
-   int loadedRoom : 0x1680B0, 0x20; // Excludes world map (900)
+   int roomID : 0x168088, 0x54, 0xBC, 0x8;
+   //int loadedRoom : 0x1680B0, 0x20; // Excludes world map (900)
    //int dstRoom : 0x1665B8, 0xD0; // Seems to be a logical ID that doesn't always match loadedRoom, and doesn't always get set
 }
 
@@ -12,7 +13,8 @@ state("QfG5", "1.0") {
    int charPtr : 0x168058, 0x80;
    byte100 flags : 0x168058, 0x90;
    int day : 0x168058, 0x104;
-   int loadedRoom : 0x168080, 0x20; // Excludes world map (900)
+   int roomID : 0x168058, 0x54, 0xBC, 0x8;
+   //int loadedRoom : 0x168080, 0x20; // Excludes world map (900)
    //int dstRoom : 0x166588, 0xD0; // Seems to be a logical ID that doesn't always match loadedRoom, and doesn't always get set
 }
 
@@ -207,6 +209,11 @@ startup {
          allOptions.Add(ValueTuple.Create(642, "flag", "deed_warn_guards",              "Warn guards about Kokeeno's death",         false, "deeds_all"));
       }
 
+      allOptions.Add(ValueTuple.Create(-1, "group", "deeds_fighter_paladin", "Fighter/Paladin", true, "deeds"));
+      {
+         allOptions.Add(ValueTuple.Create(467, "flag", "deed_defeat_general",           "Defeat the General",                        false, "deeds_fighter_paladin"));
+      }
+
       allOptions.Add(ValueTuple.Create(-1, "group", "deeds_wizard_paladin", "Wizard/Paladin", true, "deeds"));
       {
          allOptions.Add(ValueTuple.Create( 27, "flag", "deed_apprehend_arestes",        "Apprehend Arestes",                         false, "deeds_wizard_paladin"));
@@ -217,6 +224,42 @@ startup {
          allOptions.Add(ValueTuple.Create(146, "flag", "deed_release_erana",            "Release Erana",                             false, "deeds_wizard_paladin"));
          allOptions.Add(ValueTuple.Create(238, "flag", "deed_release_katrina",          "Release Katrina",                           false, "deeds_wizard_paladin"));
          allOptions.Add(ValueTuple.Create( 24, "flag", "deed_show_toolkit",             "Show Interesting Toolkit to Erasmus",       false, "deeds_wizard_paladin"));
+      }
+
+      allOptions.Add(ValueTuple.Create(-1, "group", "deeds_fighter", "Fighter only", true, "deeds"));
+      {
+         allOptions.Add(ValueTuple.Create(607, "flag", "deed_defeat_cerberus",          "Defeat Cerberus",                           false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(225, "flag", "deed_defeat_hydra",             "Defeat Hydra",                              false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create( 34, "flag", "deed_defeat_queen_atlantis",    "Defeat Queen of Atlantis",                  false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(658, "flag", "deed_defeat_war_minotaur",      "Defeat War Minotaur",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(724, "flag", "deed_defeat_sifnos_wizard",     "Defeat Wizard of Sifnos",                   false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(621, "flag", "deed_fight_elsa",               "Fight Elsa in Arena",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(622, "flag", "deed_fight_gort",               "Fight Gort in Arena",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(623, "flag", "deed_fight_magnum",             "Fight Magnum in Arena",                     false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(624, "flag", "deed_fight_toro",               "Fight Toro in Arena",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(596, "flag", "deed_gamble_self",              "Gamble on self in Arena",                   false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(615, "flag", "deed_buy_dragon_slayer",        "Buy Dragon Slayer Sword",                   false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(647, "flag", "deed_buy_magic_armor",          "Buy Magic Armor",                           false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(649, "flag", "deed_buy_magic_helm",           "Buy Magic Helm (or get from FA)",           false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(594, "flag", "deed_kill_battie",              "Kill Battie or Winged Homunculus",          false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(595, "flag", "deed_kill_bear_man",            "Kill Bear Man or Grizzly Man",              false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(600, "flag", "deed_kill_boar_man",            "Kill Boar Man",                             false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(605, "flag", "deed_kill_cougar_man",          "Kill Cougar Man",                           false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(612, "flag", "deed_kill_dragon_fish",         "Kill Dragon Fish",                          false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(613, "flag", "deed_kill_dragonling",          "Kill Dragonling",                           false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(633, "flag", "deed_kill_goon",                "Kill Goon",                                 false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(635, "flag", "deed_kill_wrangler",            "Kill Grangler or Wrangler",                 false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(630, "flag", "deed_kill_undead",              "Kill Lemure, Mane, or Shade",               false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(697, "flag", "deed_kill_remora",              "Kill Remora",                               false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(691, "flag", "deed_kill_salamander",          "Kill Salamander",                           false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(714, "flag", "deed_kill_triton",              "Kill Triton",                               false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(723, "flag", "deed_kill_weirding",            "Kill Weirding",                             false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(682, "flag", "deed_win_freedom",              "Win Rite of Freedom",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(687, "flag", "deed_win_conquest",             "Win Rite of Conquest",                      false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(685, "flag", "deed_win_valor",                "Win Rite of Valor",                         false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(678, "flag", "deed_win_destiny",              "Win Rite of Destiny",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(676, "flag", "deed_win_courage",              "Win Rite of Courage",                       false, "deeds_fighter"));
+         allOptions.Add(ValueTuple.Create(684, "flag", "deed_win_peace",                "Win Rite of Peace",                         false, "deeds_fighter"));
       }
 
       allOptions.Add(ValueTuple.Create(-1, "group", "deeds_wizard", "Wizard only", true, "deeds"));
@@ -567,7 +610,7 @@ split {
    if (version == "") { return false; }
 
    // @TODO: In theory, this can misfire on reboot due to uninitialized memory
-   if (current.loadedRoom != old.loadedRoom && vars.pendingRoomCodes.Remove(current.loadedRoom)) {
+   if (current.roomID != old.roomID && vars.pendingRoomCodes.Remove(current.roomID)) {
       ++vars.queuedSplits;
    }
 
